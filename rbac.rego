@@ -1,12 +1,12 @@
-package app.rbac
+package app.rbac.allow
 
 import rego.v1
 
 # Politique principale d'autorisation RBAC
-default authorized := false
+default allow := false
 
 # Autoriser si l'utilisateur a le rôle approprié pour l'action sur la ressource
-authorized if {
+allow if {
 	user_has_permission
 }
 
@@ -61,5 +61,5 @@ decision_log := {
 	"input": input,
 	"user_data": data.users[input.user],
 	"timestamp": time.now_ns(),
-	"decision": authorized,
+	"decision": allow,
 }
