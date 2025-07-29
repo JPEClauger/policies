@@ -57,9 +57,9 @@ site_access_allowed(site_id) if {
 }
 
 # Log des décisions pour le débogage
-decision_log := {
-	"input": input,
-	"user_data": data.users[input.user],
-	"timestamp": time.now_ns(),
-	"decision": allow,
-}
+# decision_log := {
+# 	"input": input,
+# 	"user_data": data.users[input.user],
+# 	"timestamp": time.now_ns(),
+# 	"decision": allow,
+# }
