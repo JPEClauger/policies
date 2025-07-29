@@ -1,4 +1,4 @@
-package rbac
+package app.rbac
 
 import rego.v1
 
